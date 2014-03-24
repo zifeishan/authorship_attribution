@@ -1,6 +1,9 @@
 NAME=PAA
 
-all: markdown pdf 
+all: init markdown pdf 
+
+init:
+	mkdir -p build
 
 markdown: problem related model dataset eval conc
 

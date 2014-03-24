@@ -7,12 +7,11 @@ We will propose a taxonomy of knowledge that might help attributing authorship, 
 
 <!-- % TODO anything missed here? -->
 
-<!-- #. is enumerate from 1. -->
-#. **Corpus statistics:** frequent and surprising words, K-grams, and sentences.
-#. **Shallow NLP features:** distribution of POS tags, NER tags, etc.
-#. **Deep NLP features:** parse tree structure, frequent dependency paths, etc
-#. **Knowledge base:** entities and relations in the article; what kinds of relations are the author supporting or attacking.
-#. **Domain-specific features:** 
+1. **Corpus statistics:** frequent and surprising words, K-grams, and sentences.
+2. **Shallow NLP features:** distribution of POS tags, NER tags, etc.
+3. **Deep NLP features:** parse tree structure, frequent dependency paths, etc
+4. **Knowledge base:** entities and relations in the article; what kinds of relations are the author supporting or attacking.
+5. **Domain-specific features:** 
 	- article structure and flow organization, citation patterns, tables and figures, order of authors, author affiliations, etc.
 	- *Non-double-blind features:* features that are not applicable in double-blind review process, e.g. explicit self-citations (``our work'', etc).
 
