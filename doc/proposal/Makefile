@@ -2,10 +2,10 @@ NAME=PAA
 
 all: markdown pdf 
 
-markdown: intro related model dataset conc
+markdown: problem related model dataset eval conc
 
-intro: src/intro.md
-	pandoc src/intro.md -o build/intro.tex
+problem: src/problem.md
+	pandoc src/problem.md -o build/problem.tex
 
 related: src/related.md 
 	pandoc src/related.md -o build/related.tex
@@ -16,18 +16,21 @@ model: src/model.md
 dataset: src/dataset.md 
 	pandoc src/dataset.md -o build/dataset.tex
 
+eval: src/eval.md
+	pandoc src/eval.md -o build/eval.tex
+
 conc: src/conc.md
 	pandoc src/conc.md -o build/conc.tex
 
-pdf: template/templateacm.tex
+pdf: template/template.tex
 	cp template/sig-alternate.cls ./
-	pdflatex template/templateacm.tex
-	bibtex templateacm
-	pdflatex template/templateacm.tex
-	pdflatex template/templateacm.tex
+	pdflatex template/template.tex
+	bibtex template
+	pdflatex template/template.tex
+	pdflatex template/template.tex
 	rm -f *.log *.aux *.out *.bbl *.blg
 	rm -f sig-alternate.cls
-	mv templateacm.pdf proposal.pdf
+	mv template.pdf proposal.pdf
 	echo 'Compiled document: proposal.pdf'
 
 clean:
